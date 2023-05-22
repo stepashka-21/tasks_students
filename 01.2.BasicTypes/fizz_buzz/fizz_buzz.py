@@ -19,5 +19,5 @@ def get_fizz_buzz(n: int) -> list[tp.Union[int, str]]:
         elif i % 5 == 0:
             st.append("Buzz")
         else:
-            st.append(str(i))
+            st.append(i)
     return list[tp.Union[int, str]](st)
