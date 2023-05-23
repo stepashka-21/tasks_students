@@ -10,7 +10,7 @@ def count_operations(source_code: types.CodeType) -> dict[str, int]:
     :return: operation counts
     """
 
-    result: types.Counter[str] = Counter()
+    result = Counter()
     for instruction in dis.get_instructions(source_code):
         result.update([instruction.opname])
         if isinstance(instruction.argval, types.CodeType):

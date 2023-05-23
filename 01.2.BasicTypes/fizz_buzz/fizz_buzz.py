@@ -10,7 +10,7 @@ def get_fizz_buzz(n: int) -> list[tp.Union[int, str]]:
     :param n: size of sequence
     :return: list of values.
     """
-    st = []
+    st: list[tp.Union[int, str]] = []
     for i in range(1, n + 1):
         if i % 3 == 0 and i % 5 == 0:
             st.append("FizzBuzz")
@@ -20,4 +20,4 @@ def get_fizz_buzz(n: int) -> list[tp.Union[int, str]]:
             st.append("Buzz")
         else:
             st.append(i)
-    return list[tp.Union[int, str]](st)
+    return st

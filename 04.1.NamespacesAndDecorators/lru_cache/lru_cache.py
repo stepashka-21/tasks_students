@@ -13,8 +13,8 @@ def cache(max_size: int) -> Callable[[Function], Function]:
     :return: decorator, which wraps any function passed
     """
 
-    def decorator(func: Function) -> Function:
-        dict_res: OrderedDict = OrderedDict()
+    def decorator(func: Function) -> Any:
+        dict_res: OrderedDict[Any, int] = OrderedDict()
 
         @wraps(func)
         def wrapper(*args: Any, **kwargs: Any) -> Any:
